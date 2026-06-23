@@ -1,0 +1,49 @@
+[project]
+name = "mynoh"
+version = "0.1.0"
+description = "Intelligent developer memory assistant and personal knowledge manager"
+readme = "README.md"
+requires-python = ">=3.13"
+license = {text = "MIT"}
+authors = [{name = "Mynoh Contributors"}]
+dependencies = [
+  "flet>=0.25.0",
+  "requests>=2.32.0",
+  "keyring>=25.0.0",
+  "cryptography>=43.0.0",
+  "pydantic>=2.8.0",
+  "pyinstaller>=6.10.0",
+  "markdown>=3.7",
+  "pygments>=2.18.0",
+  "pillow>=10.4.0",
+  "plyer>=2.1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.3.0",
+  "pytest-asyncio>=0.24.0",
+  "black>=24.8.0",
+  "isort>=5.13.0",
+  "flake8>=7.1.0",
+  "ruff>=0.6.0",
+]
+
+[project.scripts]
+mynoh = "main:main"
+
+[tool.black]
+line-length = 100
+target-version = ["py313"]
+
+[tool.isort]
+profile = "black"
+line_length = 100
+
+[tool.ruff]
+line-length = 100
+target-version = "py313"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

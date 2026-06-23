@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.venv/
+venv/
+.env
+
+# Build/test
+build/
+dist/
+*.spec
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+coverage/
+htmlcov/
+
+# Mynoh local data
+*.sqlite3
+!assets/sample_mynoh.sqlite3
+*.log
+exports/
+backups/
+packaging/
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
